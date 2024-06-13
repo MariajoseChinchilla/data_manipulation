@@ -39,7 +39,7 @@ def reservas(reestructuracion: bool) ->  float:
     return reservas
 
 # funcion para calcular la tasa minima para dejar a cero el margen
-def tasa_minima(reservas):
+def tasa_minima(reservas) -> float:
     pasivos = (0.08 + 0.0025) / (1 - 0.146)
     return pasivos + reservas
 
