@@ -32,5 +32,6 @@ def logica_consolidacion(tipo: str, creditos: list, rci: float, salario: float):
             tpp = sum(cred[0] * cred[1] for cred in creditos) / sum(cred[0] for cred in creditos)
             monto_max = calcular_monto_a_rci(tpp, 60, 144, rci, salario)
             montos_consolidar = elegir_creditos_a_consolidar("Total", creditos, monto_max)
-    except:
-        pass
+            deuda_total = sum(cred[0] for cred in montos_consolidar)
+    except Exception as e:
+        print(e)
