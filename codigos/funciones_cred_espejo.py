@@ -1,3 +1,6 @@
+""" Algoritmo para consolidaciones extenras. NO implementado aún en Blaze,"""
+
+
 from utils import calcular_monto_a_rci
 
 # Se asume que la lista de créditos viene en el formato (monto, tasa, plazo, categoría, cumple)

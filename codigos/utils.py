@@ -1,3 +1,5 @@
+from dateutil.relativedelta import relativedelta
+
 # función que verifica si un crédito ya cumplió el 15% de pago a capital
 def cumple_15(saldo: float) -> int:
     if saldo < 0.15:
@@ -12,8 +14,16 @@ def calcular_cuota(monto: float, tasa: float, plazo: int) -> float:
 
 def ingresos_financieros(monto: float, tasa: float, plazo: int, n: int) -> float:
     cuota = calcular_cuota(monto, tasa, plazo)
-    ingresos = (monto - cuota / tasa) * ((1 + tasa)**n - 1) + cuota * n
-    return ingresos
+    try:  
+        if tasa > 0 and n <= plazo:
+            ingresos = (monto - cuota / tasa) * ((1 + tasa)**n - 1) + cuota * n
+        if tasa <= 0 and n <= plazo:
+            ingresos = 0
+        if n > plazo:
+            ingresos = (monto - cuota / tasa) * ((1 + tasa)**plazo - 1) + cuota * plazo
+        return ingresos
+    except Exception as e:
+        return e
 
 # función que calcula el monto máximo para llegar a un nivel de RCI con la tasa dada
 def calcular_monto_a_rci(tasa: float, rci_deseado: float, 
@@ -46,3 +56,8 @@ def tasa_minima(reservas) -> float:
 # funcion que calcula la tasa maxima del cliente para llegar a un nivel de RCI
 def tasa_maxima(rci: float, cota: float) -> float:
     return cota - rci
+
+# función para sacar meses entre fechas
+def meses_entre_fechas(fecha_inicio, fecha_fin):
+    delta = relativedelta(fecha_fin, fecha_inicio)
+    return delta.years * 12 + delta.months
