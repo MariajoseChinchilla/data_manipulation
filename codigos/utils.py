@@ -61,3 +61,8 @@ def tasa_maxima(rci: float, cota: float) -> float:
 def meses_entre_fechas(fecha_inicio, fecha_fin):
     delta = relativedelta(fecha_fin, fecha_inicio)
     return delta.years * 12 + delta.months
+
+def ingreso_fin_entre_fechas(monto: float, tasa: float, plazo: int, n1: int, n2: int) -> float:
+    ingresos_inciales = ingresos_financieros(monto, tasa, plazo, min(n1, n2))
+    ingresos_finales = ingresos_financieros(monto, tasa, plazo, max(n1, n2))
+    return ingresos_finales - ingresos_inciales
