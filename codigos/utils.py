@@ -17,7 +17,7 @@ def ingresos_financieros(monto: float, tasa: float, plazo: int, n: int) -> float
     try:  
         if tasa > 0 and n <= plazo:
             ingresos = (monto - cuota / tasa) * ((1 + tasa)**n - 1) + cuota * n
-        if tasa <= 0 and n <= plazo:
+        if tasa <= 0:
             ingresos = 0
         if n > plazo:
             ingresos = (monto - cuota / tasa) * ((1 + tasa)**plazo - 1) + cuota * plazo
@@ -65,4 +65,7 @@ def meses_entre_fechas(fecha_inicio, fecha_fin):
 def ingreso_fin_entre_fechas(monto: float, tasa: float, plazo: int, n1: int, n2: int) -> float:
     ingresos_inciales = ingresos_financieros(monto, tasa, plazo, min(n1, n2))
     ingresos_finales = ingresos_financieros(monto, tasa, plazo, max(n1, n2))
-    return ingresos_finales - ingresos_inciales
+    try:
+        return ingresos_finales - ingresos_inciales
+    except Exception as e:
+        return e
