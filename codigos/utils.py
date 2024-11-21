@@ -15,11 +15,11 @@ def calcular_cuota(monto: float, tasa: float, plazo: int) -> float:
 def ingresos_financieros(monto: float, tasa: float, plazo: int, n: int) -> float:
     cuota = calcular_cuota(monto, tasa, plazo)
     try:  
-        if tasa > 0 and n <= plazo:
+        if tasa > 0 and n < plazo:
             ingresos = (monto - cuota / tasa) * ((1 + tasa)**n - 1) + cuota * n
         if tasa <= 0:
             ingresos = 0
-        if n > plazo:
+        if n >= plazo:
             ingresos = (monto - cuota / tasa) * ((1 + tasa)**plazo - 1) + cuota * plazo
         return ingresos
     except Exception as e:
