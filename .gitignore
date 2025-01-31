@@ -5,8 +5,8 @@
 *.pdf
 *.png
 *.tex
-*feather
-*sql
+*.feather
+*.sql
 *.txt
 *.lnk
 *.docx
