@@ -1,0 +1,37 @@
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+QUINTIL & CLIENTES & SALDO & RCI INT INI & RCI GLOB INI \\
+\midrule
+QUINTIL 1 & 22191.00 & 270083736.94 & 39.69 & 53.29 \\
+QUINTIL 2 & 22190.00 & 773542589.28 & 35.59 & 51.02 \\
+QUINTIL 3 & 22190.00 & 1682959240.91 & 39.72 & 52.26 \\
+QUINTIL 4 & 22190.00 & 2970141377.59 & 43.52 & 54.24 \\
+QUINTIL 5 & 22190.00 & 4552865191.37 & 45.52 & 55.96 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Resumen de Impactos - Parte 1}
+\label{tab:resumen_impactos_part1}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+RCI INT FIN & RCI GLOB FIN & CUOTA INI & CUOTA FIN & AUM CUOTA \\
+\midrule
+37.37 & 53.29 & 301.73 & 322.53 & 20.80 \\
+34.63 & 51.03 & 861.83 & 914.35 & 52.52 \\
+40.53 & 52.28 & 1791.89 & 1910.18 & 118.28 \\
+44.40 & 54.27 & 2910.23 & 3114.95 & 204.71 \\
+47.02 & 56.00 & 4057.17 & 4405.79 & 348.62 \\
+\bottomrule
+\end{tabular}
+}
+\caption{Resumen de Impactos - Parte 2}
+\label{tab:resumen_impactos_part2}
+\end{table}

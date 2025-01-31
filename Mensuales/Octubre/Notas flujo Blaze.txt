@@ -1,0 +1,23 @@
+El orden de priorización de accionables en el flujo 
+Blaze es:
+
+	- Retención
+	- 15%
+	- BR
+	- Bi
+	- Exlusivo BT
+
+Las iniciativas son aplicables de acuerdo a configura-
+ción de crédito (monto), el precio se prioriza 
+de acuerdo al más alto. Garantizando que al tomar el
+precio máximo todas las iniciativas restantes
+sean cubiertas.
+
+Dudas pendientes de responder:
+	- ¿Es posible modificar el flujo de retención
+	para que un crédito con incumplimiento del
+	15% sí aplique para retención? De ser así, 
+	¿qué condiciones deberían de ocurrir para que 
+	se aplique la modificación y qué mconfigura-
+	ción de crédito habría que otorgar para
+	que sea viable?

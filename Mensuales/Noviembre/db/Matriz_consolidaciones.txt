@@ -1,0 +1,8 @@
+\begin{tabular}{lrr}
+\toprule
+ & Sí & No \\
+\midrule
+0 & 2857 & 0 \\
+1 & 4007 & 191561 \\
+\bottomrule
+\end{tabular}
