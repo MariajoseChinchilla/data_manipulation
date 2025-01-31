@@ -3,3 +3,8 @@
 *.pbix
 *.pptx
 *.pdf
+*.png
+*.tex
+*feather
+*sql
+*.txt
