@@ -8,6 +8,6 @@
 *feather
 *sql
 *.txt
-*lnk
-*docx
+*.lnk
+*.docx
 *.xls
